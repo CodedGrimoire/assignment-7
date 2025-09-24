@@ -30,7 +30,7 @@
 .footer-about p {
   font-size: 14px;
   line-height: 1.6;
-  color: #ccc;
+  color: #d6c5c5;
 }
 
 .footer-links {
@@ -67,9 +67,6 @@
   gap: 8px;
 }
 
-.footer-links ul li a:hover {
-  color: white;
-}
 
 .social li {
   margin-bottom: 8px;
@@ -78,7 +75,35 @@
 .footer-bottom {
   text-align: center;
   padding-top: 15px;
-  border-top: 1px solid #333;
+  border-top: 1px solid #3d3a3a;
   font-size: 13px;
   color: #959090;
+}
+
+@media (max-width: 576px) {
+   .footer {
+    width: 100vw;
+    padding: 24px 16px 12px;
+    overflow-x: hidden;
+  }
+  .footer-main-part {
+    flex-direction: column;
+   
+    align-items: stretch;
+    
+    width: 100%;
+  }
+
+  .footer-about, .footer-links {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .footer-links {
+    justify-content: center;
+  }
+  .footer-links ul{
+    padding: 0;
+  margin: 0;
+  }
 }

@@ -51,7 +51,7 @@ const Footer = () => (
             <li><a href=""><FaTwitter /> @CS — Ticket System</a></li>
             <li><a href=""><FaLinkedin /> @CS — Ticket System</a></li>
             <li><a href=""><FaFacebook /> @CS — Ticket System</a></li>
-            <li><a href="mailto:support@cst.com"><FaEnvelope /> support@cst.com</a></li>
+            <li><a href=""><FaEnvelope /> support@cst.com</a></li>
           </ul>
         </div>
       </div>

@@ -1,26 +1,32 @@
-/* reset the Vite starter flex */
-body {
-  margin: 0;
-  display: block;   /* <-- IMPORTANT */
-  background: #f3f7ff; /* whatever you want */
-}
 
-/* make the app fill the viewport and push footer down */
 #root {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
-/* whatever your main content wrapper is */
+body {
+  margin: 0;
+  display: block;
+  background: #f3f7ff;
+}
+
+
 .content {
   flex: 1 0 auto;
 }
 
-/* footer sticks to bottom of page when content is short */
 footer.footer {
   margin-top: auto;
- 
   box-sizing: border-box;
-   width: 100vw;  
+  width: 100vw;
+}
+@media (max-width: 576px) {
+    body{
+       width: 100vw;
+    }
+  footer.footer {
+    padding: 20px;
+  }
 }
