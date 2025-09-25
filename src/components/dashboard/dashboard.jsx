@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./dashboard.css";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Dashboard = () => {
   const [tickets, setTickets] = useState([]);
@@ -34,6 +36,7 @@ function progressCountDecrease() {
     if (!inProgressTasks.find((t) => t.id === ticket.id)) {
       setInProgressTasks([...inProgressTasks, ticket]);
       progressCountIncrease();
+      toast.info(`"${ticket.title}" is being processed!`);
     }
   };
   
@@ -63,7 +66,7 @@ function progressCountDecrease() {
       </div>
 
       <div className="main-section">
-        {/* Tickets Grid */}
+        
         <div className="tickets">
           {tickets.map((ticket) => (
             <div
@@ -90,7 +93,7 @@ function progressCountDecrease() {
           ))}
         </div>
 
-        {/* Sidebar */}
+        
         <div className="ticket-status">
           <h3>Task Status</h3>
           <div className="task-buttons">
@@ -125,6 +128,7 @@ function progressCountDecrease() {
           </div>
         </div>
       </div>
+       <ToastContainer position="top-right" autoClose={2000} hideProgressBar />
     </div>
   );
 };

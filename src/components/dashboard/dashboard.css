@@ -42,10 +42,7 @@ body {
   background: linear-gradient(135deg, #28c76f, #48e098);
 }
 
-.main-section {
-  display: flex;
-  gap: 20px;
-}
+
 
 
 .tickets {
@@ -124,6 +121,12 @@ body {
   color: #0f0202;
   
 }
+.main-section {
+  display: flex;
+  gap: 20px;
+  flex-direction: row;  
+  align-items: flex-start; 
+}
 
 .task-buttons {
   display: flex;
@@ -180,7 +183,7 @@ body {
 }
 
 .ticket-status {
-  flex: 1;
+  
   background: #fff;
   padding: 15px;
   border-radius: 10px;
@@ -217,9 +220,7 @@ body {
   transition: background 0.3s;
 }
 
-.complete-btn:hover {
-  background: #22a65c;
-}
+
 
 .resolved-status {
   margin-top: 20px;
@@ -233,4 +234,29 @@ body {
   font-size: 14px;
   font-weight: 500;
   color: #333;
+}
+
+@media (max-width: 576px) {
+  .tickets {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    margin: auto;
+  }
+  .cards {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    max-width: 480px;
+    margin:auto
+    
+  }
+  .main-section {
+    display: flex;
+    flex-direction: column;
+  }
+  .ticket-status{
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
 }
