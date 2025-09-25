@@ -16,8 +16,7 @@ const Dashboard = () => {
 
  const [inProgressTasks, setInProgressTasks] = useState([]);
   const [resolvedTasks, setResolvedTasks] = useState([]);
-  const [inProgressCount, setInProgressCount] = useState(0);
-  const [resolvedCount, setResolvedCount] = useState(0);
+  
 
 function progressCountIncrease() {
     const newCount=inProgressCount + 1;
@@ -31,7 +30,8 @@ function progressCountDecrease() {
     const newCount=inProgressCount - 1;
     setInProgressCount(newCount);
   }
-  
+  const [inProgressCount, setInProgressCount] = useState(0);
+  const [resolvedCount, setResolvedCount] = useState(0);
   const moveToInProgress = (ticket) => {
     if (!inProgressTasks.find((t) => t.id === ticket.id)) {
       setInProgressTasks([...inProgressTasks, ticket]);
