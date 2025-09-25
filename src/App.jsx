@@ -15,7 +15,8 @@ function App() {
     <nav>
 <NavBar />
     </nav>
-    <Dashboard />
+    
+    <main><Dashboard /></main>
 
       <footer><Footer /></footer>
     

@@ -1,12 +1,16 @@
 .footer {
   background: black;
-  width: 100%;
-  color: #fff;
+  
+  color: white;
   padding: 40px 60px 20px;
   box-sizing: border-box;
    width: 100%;        
   margin: 0;  
+
  
+}
+html, body {
+  overflow-x: hidden;
 }
 
 .footer-main-part {
