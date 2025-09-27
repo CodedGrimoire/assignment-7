@@ -251,14 +251,19 @@ body {
 @media (max-width: 576px) {
   .tickets {
     grid-template-columns: 1fr;
-    max-width: 480px;
+    max-width: 90%;
     margin: auto;
+  }
+  .customer-ticket-text h1{
+    text-align: center;
+    margin: auto;
+    
   }
   .cards {
     padding: 10px;
     display: flex;
     flex-direction: column;
-    width: 480px;
+    width: 80%;
     
     margin:auto;
     margin-bottom: 50px;
