@@ -8,7 +8,7 @@ body {
   background-color: white;
 }
 
-.customer-ticket-text h1{
+.customer-ticket-text{
   text-align: left;
   font-size: 24px;
   margin-bottom: 20px;
@@ -254,10 +254,11 @@ body {
     max-width: 90%;
     margin: auto;
   }
-  .customer-ticket-text h1{
+  .customer-ticket-text{
     text-align: center;
     margin: auto;
-    
+    margin-bottom: 20px;
+
   }
   .cards {
     padding: 10px;
