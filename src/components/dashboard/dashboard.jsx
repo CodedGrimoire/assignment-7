@@ -78,10 +78,11 @@ function progressCountDecrease() {
             <img className="Right-side" src="/vector1.png" alt="" />
         </div>
       </div>
-
+<h1 className="customer-ticket-text">Customer Tickets</h1>
       <div className="main-section">
-        
+       
         <div className="tickets">
+           
           
           {tickets.length === 0 ? (
     <p>No tickets available</p>
@@ -119,7 +120,7 @@ function progressCountDecrease() {
           <h3>Task Status</h3>
           <div className="task-buttons">
             {inProgressTasks.length === 0 ? (
-              <p>No task in progress</p>
+              <p>Select a ticket to add to Task Status</p>
             ) : (
               inProgressTasks.map((t) => (
                 <div key={t.id} className="task-row">
