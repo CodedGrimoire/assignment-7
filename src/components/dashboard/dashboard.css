@@ -11,35 +11,40 @@ body {
 .content {
   max-width: 1200px;
   margin: auto;
+   margin-bottom: 30px; 
 }
 
 .cards {
   display: flex;
   gap: 20px;
   margin-bottom: 30px;
+  justify-content: center;
+}
+.writings{
+  margin: auto;
+  text-align: center;
+}
+.Right-side{
+   
+  transform: scaleX(-1);
 }
 
 .purple-card,
 .green-card {
-  flex: 1;
-  padding: 20px;
+ display: flex;
+  margin: auto;
   border-radius: 12px;
   color: white;
   text-align: center;
    
   
 }
-
 .purple-card {
-  background:   url("/vector1.png") no-repeat left top / contain,
-
-    linear-gradient(135deg, rgba(123, 66, 246, 0.9), rgba(181, 122, 246, 0.9));
-   
-  
+  background: linear-gradient(to right, #632EE3, #9F62F2);
 }
 
 .green-card {
-  background: linear-gradient(135deg, #28c76f, #48e098);
+  background: linear-gradient(to right, #54CF68, #00827A);
 }
 
 
@@ -246,10 +251,21 @@ body {
     padding: 10px;
     display: flex;
     flex-direction: column;
-    max-width: 480px;
-    margin:auto
+    width: 480px;
+    
+    margin:auto;
+    margin-bottom: 50px;
     
   }
+  .green-card, .purple-card{
+    margin: auto;
+    width: 90%;
+    margin: auto;
+  }
+  .left-side, .Right-side{
+    display: none;
+  }
+  
   .main-section {
     display: flex;
     flex-direction: column;
@@ -258,5 +274,7 @@ body {
     justify-content: center;
     align-items: center;
     margin: auto;
+    width: 90%;
+    
   }
 }

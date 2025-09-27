@@ -6,33 +6,21 @@
   width: 100%;
 }
 
+
+
 body {
   margin: 0;
   display: block;
-  background: #e0e1e4;
+  background: #eeeff3;
 }
+
+
 
 html, body {
     margin: 0;
   padding: 0;
-  overflow-x: hidden;
-}
-
-.content {
-  flex: 1 0 auto;
-  margin-bottom: 30px; 
-}
-
-footer.footer {
-  margin-top: auto;
-  box-sizing: border-box;
  
 }
-@media (max-width: 576px) {
-    body{
-       width: 100vw;
-    }
-  footer.footer {
-    padding: 20px;
-  }
-}
+
+
+

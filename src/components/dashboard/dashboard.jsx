@@ -48,27 +48,44 @@ function progressCountDecrease() {
 
     setInProgressTasks(inProgressTasks.filter((t) => t.id !== ticket.id));
     resolvedIncrease();
+     toast.info(`"${ticket.title}" is resolved!`);
     progressCountDecrease();
+    removeFromCustomerService(ticket);
   };
+
+  function removeFromCustomerService(ticket) {
+    setTickets(tickets.filter((t) => t.id !== ticket.id));
+  }
 
   return (
     <div className="content">
       
       <div className="cards">
         <div className="purple-card">
+          <img className="left-side"  src="/vector1.png" alt="" />
+          <div className="writings">
           <h4>In-Progress</h4>
           <h1>{inProgressCount}</h1>
+          </div>
+           <img className="Right-side" src="/vector1.png" alt="" />
         </div>
         <div className="green-card">
+           <img className="left-side"  src="/vector1.png" alt="" />
+            <div className="writings">
           <h4>Resolved</h4>
           <h1>{resolvedCount}</h1>
+          </div>
+            <img className="Right-side" src="/vector1.png" alt="" />
         </div>
       </div>
 
       <div className="main-section">
         
         <div className="tickets">
-          {tickets.map((ticket) => (
+          
+          {tickets.length === 0 ? (
+    <p>No tickets available</p>
+  ) :tickets.map((ticket) => (
             <div
               key={ticket.id}
               className="ticket-card"
@@ -77,12 +94,16 @@ function progressCountDecrease() {
               <div className="ticket-header">
                 <h4>{ticket.title}</h4>
                 <span className={`status ${ticket.status.toLowerCase()}`}>
+
                   {ticket.status}
                 </span>
               </div>
+
+
               <p>{ticket.description}</p>
               <div className="ticket-footer">
                 <span className={`priority ${ticket.priority.toLowerCase()}`}>
+
                   {ticket.priority}
                 </span>
                 <span>#{ticket.id}</span>
